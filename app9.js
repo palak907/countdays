@@ -31,10 +31,11 @@ document.getElementById('countdays').addEventListener('click',function(){
 function todays(){
     
      let td=new Date();
+     let day=td.getDate();
      let month=td.getMonth()+1;
+     let daystr=day<10?'0'+day:day;
      let monthstring=month<10?'0'+month:month;
-     endday=td.getFullYear()+'-'+monthstring+'-'+td.getDate();
+     endday=td.getFullYear()+'-'+monthstring+'-'+daystr;
      enddate.value=endday;
      
-    
 }
